@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 1 - Método Write</title>
+</head>
+<body>   
+  <p>
+    O metodo write() é usado para escrever um conteudo na tela. O mesmo deve ser usado com o objeto document.
+  </p>
+  <p>Ex: document.write(`Olá mundo!`)</p>
+  <p>Dentro do Write() se colocarmaos "", ''e `` ele interpreta com uma string, onde usando o sinal de + entre duas strings ele se torna uma concatenação.</p>
+  <p>
+    EX:
+    document.write("Olá"+'mundo'+"!")
+    Será escrito: Olámundo!
+  </p>
+  <p>
+    Podemos usar tags html e inclusive estilizações de css:<br>
+    EX:<br>
+    document.write("Olá mundo"+'!' +"	&lt;p style = 'color:red;'	&gt;Minha primeira aula de JavaScript&lt;&frasl;p&gt;")
+  </p>
+  <p>Ao usarmos o `` podemos colocar variáveis sem precisar concatenar basta usar ${variável}. EX:document.write(`Olá ${variável}!`)</p>
+
+  <script>
+    let variavel = "mundo"
+    document.write(`Olá mundo!<br>`)
+    document.write("Olá"+'mundo'+"!<br>")
+    document.write("Olá mundo"+`!`+"<p style='color:red;'>Minha primeira aula de JavaScript.</p>")
+    document.write(`Olá mundo <p style="color:blue;">Minhaprimeira aula de JS</p>`)
+    document.write(`Olá ${variavel}!`)
+  </script>
+</body>
+</html>
