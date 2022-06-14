@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa de Mensagem</title>
+  <script>
+    /*let som = 2+5
+    alert(`Olá mundo! ${som-1}`)
+    alert(`Podemos calcular como: som-1 = ${som-1}`)
+    let idade = prompt(`informe sua idade:`)
+    if(idade==25){document.write(`${idade}`)}if(idade==""){document.write("Indorme a Idade")}
+
+    let confirmaIdade = confirm(`Você estuda JS?`)
+    if(confirmaIdade==true){
+      document.write(`ok`)
+    }else{
+      document.write(`Não pode acessar`)
+    }
+    */
+  </script>
+</head>
+<body>
+  <h1>Alert, Prompt, Confirm</h1>
+  <p>Caixas de mensgens são usadas para informar ou coletar alguma informação do usuário. Diferente do metodo document.write(), a caixa de mensagem é manipulada pela window e não pelo document. Onde não tem a necessidade de utilizar o elemento window, basta colocar o comando direto.</p>
+  <h2>Alert</h2>
+  <p>A caixa de mensagem Alert possue uma String e um botão de OK, usada para alertar ou informar o usuário de algo.</p>
+  <pre>
+    EX:
+    alert("Olá Mundo!")
+  </pre>
+  <img src="https://www.stechies.com/userfiles/images/alert-1.png" alt="Imagem Alert">
+  <p>Podemos trabalhar com qualquer valor na caixa de mensagem, variaveis, strings, números, calculos.</p>
+  <pre>
+    EX:
+    let som = 2+5
+    alert(`A soma das variáveis é ${som}`) // Asoma das variáveis é 7
+    alert(2+5) // 7
+    alert(`Podemos calcular como: som-1 = ${som-1}`) // Podemos calcular como: som-1 = 6
+  </pre>
+  <p>OBS:</p>
+  <p>Para quebrar linhas dentro de uma caixa de mensagem devemos usar \n, pois o &lt;br&gt; não vai funcionar.</p>
+  <pre>
+    EX:
+    alert("Olá Mundo! \n Usando caixa de mensagem!")
+  
+    Vai aparecer:
+    Olá Mundo!
+    Usando caixa de mensagem!
+  </pre>
+  <h2>Prompt</h2>
+  <p>A caixa de mesnsagem Prompt possue uma área de texto, dois botões um de OK e outro de cancelar. Usada para receber alguma informação e armazena-la dentro de uma variável. Todo valor é recebido como uma string.</p>
+  <pre>
+    EX:
+    let idade = prompt(`Informe sua idade:`)
+  </pre>
+  <img src="https://i.stack.imgur.com/6WFjI.png" alt="Imagem Prompt">
+  <h2>Confirm</h2>
+  <p>O Confirm vai exibi um texto, dois botãoes um de OK e outro de Cancelar. Ele retorna um valor booleano, onde ao clicar em OK retorna true e se clicar em Cancelar retorna false.</p>
+  <pre>
+    EX:
+    let confirmacao = confirm(`Você quer permanecer na página?`)
+    if(confirmacao == true){
+      document.witre(`Pode acessar`)
+    }else{
+      document.write(`Não pode acessar`)
+    }
+  </pre>
+</body>
+</html>
