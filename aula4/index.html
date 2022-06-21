@@ -4,99 +4,67 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Condicionais</title>
+  <title>Operadores</title>
 </head>
 <body>
-  <h1>Condicionais</h1>
-  <p>As estruturas condicionais são usadas em qualquer linguagem de programação, inclusive no JavaScript, onde o código tem que tomar uma decisão para execultar determinada ação. Como por exemplo se a condição for está chovendo, a ação será de levar o guardachuva, se não, deixa o guardachuva em casa.</p>
-  <p>No JS existe três estruturas de condições, o If ... Else, switch e o Operador Ternário.</p>
-  <h2>If ... Else</h2>
-  <p>A estrutura de condisão <strong>if ... else</strong> é a mais usada no JavaScript, onde basicamente sua estrutura receber uma condição dentro do If, se a mesma for atendida ela execultará a ação, se não for será execultada a ação declarada dentro da estrutura do <strong>else</strong>.</p>
-  <pre>
-    if(condição){
-      código a ser execultado
-    } else{
-      código a ser execultado 
-    }
-  </pre>
-  <p>A estrutura pode também não possuir o <strong>else</strong>, mas o segundo bloco de código não é controlado pela declaração condicional, então ele vai executar sempre, independente do teste condicional retornar true ou false.</p>
-  <pre>
-    if(condição){
-      código a ser execultado
-    } 
-    código a ser execultado 
-  </pre>
-  <pre>
-    Exemplo:
-    let idade = 5
-    if(idade >= 18){
-      document.write(`Você é maior de idade`)
-    }else if(idade <= 17 && idade >= 11){
-      document.write(`Você é adolecente`)
-    }else{
-      document.write(`Você é criança`)
-    }
-  </pre>
-  <div>
-    <h3>Exemplo If...Else</h3>
-    <label for="idade">Informe a sua idade:</label>
-    <input type="text" name="idade" id="idade">
-    <input type="button" value="Enviar" id="enviar">
-    <p id="res"></p>
+  <h1>Operadores</h1>
+  <p>Os operadores são usados para realizar operações matemáticas e lógicas, o JavaScript possue os seguntes operadores:</p>
+  <ul>
+    <li>Operadores de atribuição</li>
+    <li>Operadores de comparação</li>
+    <li>Operadores aritméticos</li>
+    <li>Operadores lógicos</li>
+    <li>Operadores de string</li>
 
-  </div>
-  <h2>Switch</h2>
-  <p>A instrução Switch é usada principalmente nos casos em que se define uma variável para uma determinada opção de valor ou imprime uma determinada instrução dependendo de uma condição. Ela toma uma única expressão ou valor como uma entrada e, em seguida, examina várias opções até encontrar um que corresponda a esse valor, executando o código correspondente que o acompanha.</p>
-  <p>A sua estrutura possue a palavra reservada <strong>switch</strong>, seguida de parenteses, onde vai receber a expressão, chaves que irá conter cada caso para verificar as condições e uma palavra reservada <strong>break</strong>, que encerrá a estrutura caso a condição for atendida. Se nenhuma das condições forem atendidas devemos usar a palavra reservada <strong>default</strong> segundo do comando desejado.</p>
-  <pre>
-    EX:
-    let numero = 5
-    switch (numero){
-      case 1:
-        console.log(`Você tem 1 ano.`)
-        break;
-      case 2:
-        console.log(`Você tem 2 anos.`)
-        break;
-      case 3:
-        console.log(`Você tem 3 anos.`)
-        break;
-      case 4:
-        console.log(`Você tem 4 anos.`)
-        break;
-      case 5:
-        console.log(`Você tem 5 anos.`)
-        break;
-      default:
-        console.log(`Você tem mais de 5 anos.`)
-    }
-  </pre>
-  <div>
-    <h3>Exemplo Switch</h3>
-    <label for="idade2">Escolha um número entre 0 e 5</label><br>
-    <input type="text" name="numero" id="numero">
-    <input type="button" value="Enviar" id="enviar2">
-    <p id="res2"></p>
-
-  </div>
-  <h2>Operador Ternário</h2>
-  <p> O operador ternário ou condicional é um pequeno bit de sintaxe que testa uma condição e retorna um valor / expressão se for  true, e outro caso seja false — isso pode ser útil em algumas situações e pode ocupar muito menos código que um bloco if...else se você simplesmente tiver duas opções escolhidas entre uma condição true/false condition.</p>
-  <p>A sua estrutura possue um parentese (), onde dentro dele colocamos a condição, seguido por uma interrogação ?, se a condição for verdadeira será execultado o primeiro comando logo após a interrogação, se for falsa execulta o comando que fica apos os dois pontos : </p>
-  <pre>
-    (condição) ? sendo verdadeira execulte : sendo falsa ecetulte
-
-    Ex:
-    let cor = black
-    (cor == "black") ? console.log(`Você escolheu a cor Black`) : console.log(`Você escolheu outra cor.`)
-  </pre>
-  <div id="tema" style="border: 2px solid black; width: 500px; height: 200px; display: flex; flex-direction: column; justify-content: space-between; padding-left: 15px; box-sizing: border-box;">
-    <h1 id="h1">Você está no tema claro</h1>
-    <div style="padding-bottom: 15px;">
-      <input type="button" value="Claro" id="claro">
-      <input type="button" value="Escuro" id="escuro">
+  </ul>
+  <div id="atribuicao">
+    <h2>Operadores de Atribuição</h2>
+    <p>Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à direita. O operador de atribuição básico é o igual (=), que atribui o valor do operando à direita ao operando à esquerda. Isto é, x = y atribui o valor de y a x.</p>
+    <p>Veja uma tabela com os operadores de atribuição:</p>
+    <div style="width: 600px;">
+      <img style="width: 100%;" src="https://miro.medium.com/max/1400/1*v768JCEh8_5VdXIfCnOuzQ.png" alt="Tabela operadores de atribuição">
     </div>
   </div>
-
-  <script src="script.js"></script>
+  <div id="comparacao">
+    <h2>Operadores de comparação</h2>
+    <p>Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores === e o !==, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. </p>
+    <div style="width: 600px;">
+      <img style="width: 100%;" src="https://miro.medium.com/max/1400/1*_sS64sGl7FOjH5lecaXICA.png">
+    </div>
+  </div>
+  <div id="aritmeticos">
+    <h2>Operadores aritméticos</h2>
+    <p>Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (+), subtração (-), multiplicação (*) e divisão (/).</p>
+    <div style="width: 600px;">
+      <img style="width: 100%;" src="https://i.morioh.com/2022/04/11/b88d93e7.webp">
+    </div>
+  </div>
+  <div id="logicos">
+    <h2>Operadores lógicos</h2>
+    <p>Operadores lógicos são utilizados tipicamente com valores booleanos, neste caso, retornam um valor booleano. Entretanto, os operadores && e || na verdade retornam o valor de um dos operandos especificados, de forma que se esses operadores forem utilizados com valores não-booleanos, eles possam retornar um valor não-booleano.</p>
+    <div style="width: 600px;">
+      <img style="width: 100%;" src="https://i.morioh.com/2022/04/11/d6aa18a6.webp">
+      <p>O opderador <strong>&&</strong> as duas condições tem que ser verdadeira para retornar verdadeira.</p>
+      <p>O operador <strong>||</strong> basta satisfazer apenas uma das condições como verdadeira para retornar verdadeira.</p>
+      <p>O operador <strong>!</strong> retorna uma negação do valor, ou seja, se o valor for <strong>true</strong> ele retorna <strong>false</strong> e virse versa.</p>
+     </div>
+  </div>
+  <div id="string">
+    <h2>Operadores de string</h2>
+    <p>Além dos operadores de comparação, que podem ser utilizados em valores string, o operador de concatenação (+) concatena dois valores string, retornando outra string que é a união dos dois operandos. O operador de atribuição encurtado += também pode ser utilizado para concatenar strings.</p>
+    <p>
+      Ex:
+      <pre>
+        console.log("minha " + "string");
+        // exibe a string "minha string".
+      </pre>
+      <pre>
+        var minhaString = "alfa";
+        minhaString += "beto";
+        console.log(minhaString)
+        // exiber a string "alfabeto"
+      </pre>
+    </p>
+  </div>
 </body>
 </html>
