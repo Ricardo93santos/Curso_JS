@@ -37,6 +37,14 @@
       document.write(`Você é criança`)
     }
   </pre>
+  <div>
+    <h3>Exemplo If...Else</h3>
+    <label for="idade">Informe a sua idade:</label>
+    <input type="text" name="idade" id="idade">
+    <input type="button" value="Enviar" id="enviar">
+    <p id="res"></p>
+
+  </div>
   <h2>Switch</h2>
   <p>A instrução Switch é usada principalmente nos casos em que se define uma variável para uma determinada opção de valor ou imprime uma determinada instrução dependendo de uma condição. Ela toma uma única expressão ou valor como uma entrada e, em seguida, examina várias opções até encontrar um que corresponda a esse valor, executando o código correspondente que o acompanha.</p>
   <p>A sua estrutura possue a palavra reservada <strong>switch</strong>, seguida de parenteses, onde vai receber a expressão, chaves que irá conter cada caso para verificar as condições e uma palavra reservada <strong>break</strong>, que encerrá a estrutura caso a condição for atendida. Se nenhuma das condições forem atendidas devemos usar a palavra reservada <strong>default</strong> segundo do comando desejado.</p>
@@ -59,10 +67,18 @@
       case 5:
         console.log(`Você tem 5 anos.`)
         break;
-      defailt:
+      default:
         console.log(`Você tem mais de 5 anos.`)
     }
   </pre>
+  <div>
+    <h3>Exemplo Switch</h3>
+    <label for="idade2">Escolha um número entre 0 e 5</label><br>
+    <input type="text" name="numero" id="numero">
+    <input type="button" value="Enviar" id="enviar2">
+    <p id="res2"></p>
+
+  </div>
   <h2>Operador Ternário</h2>
   <p> O operador ternário ou condicional é um pequeno bit de sintaxe que testa uma condição e retorna um valor / expressão se for  true, e outro caso seja false — isso pode ser útil em algumas situações e pode ocupar muito menos código que um bloco if...else se você simplesmente tiver duas opções escolhidas entre uma condição true/false condition.</p>
   <p>A sua estrutura possue um parentese (), onde dentro dele colocamos a condição, seguido por uma interrogação ?, se a condição for verdadeira será execultado o primeiro comando logo após a interrogação, se for falsa execulta o comando que fica apos os dois pontos : </p>
@@ -73,5 +89,14 @@
     let cor = black
     (cor == "black") ? console.log(`Você escolheu a cor Black`) : console.log(`Você escolheu outra cor.`)
   </pre>
+  <div id="tema" style="border: 2px solid black; width: 500px; height: 200px; display: flex; flex-direction: column; justify-content: space-between; padding-left: 15px; box-sizing: border-box;">
+    <h1 id="h1">Você está no tema claro</h1>
+    <div style="padding-bottom: 15px;">
+      <input type="button" value="Claro" id="claro">
+      <input type="button" value="Escuro" id="escuro">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
