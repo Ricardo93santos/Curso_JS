@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+<body>
+  <h1>Array</h1>
+  <p>O objeto Array do JavaScript é um objeto global usado na construção de vetores e matrizes. Arrays são objetos semelhantes a listas que vêm com uma série de métodos embutidos para realizar operações de travessia e mutação. Um array em JavaScript não tem tamanho nem tipos de elementos fixos. Já que o tamanho de um array pode ser alterado a qualquer momento e os dados podem ser armazenados em posições não contíguas.</p>
+  <p>Um Array pode armazenaz qualquer valor, seja uma string, um objeto, outro array ou até mesmo uma função. A sua sintaxe é a segunte: let arr = [elemento0, elemento1, elemento2, ...], onde os elementos devem ser separados por uma "," para assumir sua posição e devem ser contados e manipulados apartir do indece 0, pois é o primeiro elemento e o último elemento está na  posição equivalente ao valor da propriedade length (tamanho).</p>
+  <pre>
+    Ex:
+    let arr = ["vassoura", 2, "pá" ]
+    console.log(arr.length) // 3
+    console.log(arr[0]) // vassoura
+    console.log(arr[1]) // 2
+    console.log(arr[arr.length - 1]) // pá
+  </pre>
+  <h2>Manipulando Arrays</h2>
+  <p>Já compreendemos que para verificar o comprimento de um array basta usar o metodo array.length, para acessar o primeiro elemento, array[0] e para acessar o ultimo elemento, array[array.length - 1]. Mas para adicionar, remover e procurar um elemento? Devemos usar devemos usar os seguntes métodos:</p>
+  <ul>
+    <li><strong>push()</strong> - Adicionar um item ao final do Array</li>
+    <li><strong>pop()</strong> - Remover um item do final do Array</li>
+    <li><strong>unshift()</strong> - Adicionar ao início do Array</li>
+    <li><strong>shift()</strong> - Remover do início do Array</li>
+    <li><strong>indexOf()</strong> - Procura o índice de um item no Array, se o elemento não existe dentro do array, então retorna o valor -1</li>
+    <li><strong>splice()</strong> - Remover um ou mais item pela posição do índice</li>
+  </ul>
+  <pre>
+    EX:
+    let frutas = ['Maçã', 'Banana']
+
+    let adicionarFim = frutas.push('Laranja');
+    // ['Maçã', 'Banana', 'Laranja']
+
+    let removerFim = frutas.pop();
+    // ['Maçã', 'Banana']
+
+    let adicionarInicio = frutas.unshift('Morango')
+    // ['Morango', 'Maçã', 'Banana']
+
+    let removerInicio = frutas.shift()
+    // ['Maçã', 'Banana']
+
+    let posicao = frutas.indexOf('Maçã')
+    // 0
+    let posicao = frutas.indexOf('Pera')
+    // -1
+    
+    let removeItem = frutas.splice(posicao, 0)
+    // ["Banana"]
+    let frutas = ["Pera", "Maçã", "Abacaxi", "Banana", "Laranja"]
+    let removerFrutas = frutas.splice(2, 4)
+    // ["Abacaxi", "Banana", "Laranja"]
+  </pre>
+  <p>
+    Nesse caso:
+    <pre> 
+    let frutas = ["Pera", "Maçã", "Abacaxi", "Banana", "Laranja"]
+    let removerFrutas = frutas.splice(2, 4)
+    // ["Abacaxi", "Banana", "Laranja"]</pre>
+    Os elementos "Abacaxi", "Banana", "Laranja" assumem respectivamente as posições 0,1,2
+  </p>
+<script>
+    let arr = ["vassoura", 2, "pá" ]
+    console.log(arr.length) // 3
+    console.log(arr[0]) // vassoura
+    console.log(arr[1]) // 2
+    console.log(arr[arr.length - 1]) // pá
+
+    let frutas = ["Pera", "Maçã", "Abacaxi", "Banana", "Laranja"]
+    let removerFrutas = frutas.splice(2, 4)
+    console.log(removerFrutas)
+</script>
+</body>
+</html>
