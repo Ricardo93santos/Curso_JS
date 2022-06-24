@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laços de Repetição</title>
+</head>
+<body>
+  <h1>Laços de Repetição</h1>
+  <p>Os laços de repetição é uma forma de execultar uma ação repetidas vezes. Os mecanismos de laços oferecem diferentes formas de determinar quando este irá começar ou terminar. Há várias situações em que é mais fácil resolver um problema utilizando um determinado tipo de laço do que outros.</p>
+  <p>Tipos de laços de repetição:</p>
+  <ul>
+    <li>while</li>
+    <li>do...while</li>
+    <li>for</li>
+  </ul>
+  <h2>While</h2>
+  <p>O laço <strong>While</strong> executa suas instruções, desde que uma condição especificada seja avaliada como verdadeira. Se a condição se tornar falsa,  a declaração dentro do laço para a execução e o controle é passado para a instrução após o laço.</p>
+  <p>A sintaxe da condição while é bem simples, onde inicia com a palavra reservada while, seguida de um parentese "()" que contenha a condição para que possa ser execultada o laço, segue com uma chaves "{}" que será as instruções a serem execultadas.</p>
+  <pre>
+    EX:
+    let i = 0
+    let n = 0
+
+    while(i < 3){
+      n += i
+      i++ //1,2,3
+      console.log(n) //0,1,3
+    }
+    console.log(i) //3
+  </pre>
+  <h2>Do...While</h2>
+  <p>Semelhante ao while, com a diferença de que a instrução será executada uma vez antes da condição ser verificada. Caso a condicao seja verdadeira, então o laço será executado novamente. Ao final de cada execução, a condicao é verificada. Quando a condição contida no while for falsa a execução do laço é terminada e o controle é passado para a instrução seguinte a do...while.</p>
+  <pre>
+    EX:
+    let i = 0
+    do{
+      i += 1
+      console.log(i) // 1,2,3,4,5
+    }while(i < 5)
+  </pre>
+  <h2>For</h2>
+  <p>O laço de repetição <strong>for</strong> posse a seguinte sitaxe:</p>
+  <p>for ([expressaoInicial]; [condicao]; [incremento]){declaracao}</p>
+  <pre>
+    let n = 0
+    for(i=0;i<=3;i++){
+      n += i
+      console.log(i, n)
+    }
+    /*0 0
+      1 1
+      2 3
+      3 6*/
+  </pre>
+
+
+  <script>
+    /*let i = 0
+    let n = 0
+
+    while(i < 3){
+      n += i //0,1,3
+      i++ //1,2,3
+      console.log(n)
+    }
+    console.log(i)*/
+    /*let i = 0
+    do{
+      i += 1
+      console.log(i) // 1,2,3,4,5
+    }while(i < 5)*/
+   /* let n = 0
+    for(i=0;i<=3;i++){
+      n += i
+      console.log(i, n)
+    }*/
+  </script>
+</body>
+</html>
