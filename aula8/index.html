@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratamento de erros em JS</title>
+</head>
+<body>
+  <h1>Try, Catch e Finally</h1>
+  <p>Para tratar erros em JavaScript usamos os comando <strong>try, catch e finally</strong>, onde no bloco de comando try, deve inserir a rotina que queremos trar um provavel erro, essa rotina não gera um erro e sim uma rotina que seja passível de geração de erro. </p>
+  <p>Após ser identificado o erro no try, o mesmo é passado para o bloco de comando <strong>catch</strong>, onde será feito o tratamento do erro, que pode ser tratado da maneira que quiser, armazenando ou apresentando para o usuário.</p>
+  <p>Já o bloco <strong>finally</strong> vai ser execultado caso ocorra um erro ou não, o mesmo é opcional, podendo ser omitido.</p>
+  <p>
+    A estrutura do try...catch é a seguinte: 
+    <pre>try{
+        Rotina para ser testada
+      }catch(e){
+        rotina para tratar o erro
+      }finally{
+        opcional
+      }
+    </pre>
+    O comando try testa se tem um erro, identificando o mesmo passa para o comando catch, que armazena o erro na variável que está dentro do parentese, nesse caso "e", e execulta o tratamento dentro do bloco de comando.
+  </p>
+  <pre>
+    EX:
+
+    let nome = ""
+    try{
+      if(nome == ""){
+        throw "Preencha o campo nome."
+      }
+      document.write(nome)
+    }catch(e){
+      document.write(`${e}`)
+    }
+  </pre>
+  <p>Dentro do try será verificado com o comando "if" se a variável "nome" está vazia, o "throw" gera a exceção, com uma infromação e no bloco de comando "catch" é apresentado a informação atravez da variável "e".</p>
+  <script>
+    /*let nome = ""
+
+    try{
+      if(nome == ""){
+        throw "Preencha o campo nome."
+      }
+      document.write(nome)
+    }catch(e){
+      document.write(`${e}`)
+    }*/
+  </script>
+</body>
+</html>
