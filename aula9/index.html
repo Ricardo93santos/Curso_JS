@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando elementos do HTML</title>
+</head>
+<body>
+  <h1>Manipulando Elementos do HTML</h1>
+  <p>Existem várias formas de manipular um elemneto no HTML, para isso devemos capturar esse elemento usando os métodos prórios do JavaScript.</p>
+  <h2>getElementById</h2>
+  <p>Como já diz o ome do métoto manipulamos o elemento atrazes do seu id. A sua sitaxe é bem simples, basta usar a propriedade document, seguida do método getElementById, acompanhado com parenteses que conterá o id do elemento.</p>
+  <pre>
+    EX:
+    let nome = document.getElementById("nome")
+    nome.style.color="red"
+  </pre>
+  <p>A variável "nome" armazena o elemento do HTML onde pode ser manipulado, alterando a sua cor, tamanho ou sendo usado em alguma função expecífica.</p>
+  <h2>getElementsByTagName</h2>
+  <p>O método “getElementsByTagName”  retorna o(s) elemento(s) com o nome indicado, o ponto mais interessante é que caso haja várias tags iguais e isso é bastante comum, o método funciona como um vetor com todas as tags, por exemplo, se houver 10 tags p essas tags podem ser obtidas por array.</p>
+  <pre>
+    EX:
+    let tagP = document.getElementsByTagName("p")[3]
+    tagP.style.color="blue"
+  </pre>
+  <h2>getElementsByClassName</h2>
+  <p>Funciona semelhante ao getElementsByTagName, mas usado para capturar elementos atravez das suas classes.</p>
+  <pre>
+    EX:
+    let p1 = document.getElementsByClassName("p1")[0]
+    p1.style.color="pink"
+  </pre>
+  <h2>querySelector</h2>
+  <p>Esse método é usado para capturar o primeiro elemento dentro do documento atrazes de seu id ou de sua class, basta informar entre os parenteses se é um id usando o sinal "#" e se for uma class o "."</p>
+  <pre>
+    EX:
+    let id = document.querySelector("#id")
+    let class = document.querySelector(".class")
+  </pre>
+  <h2>querySelectorAll</h2>
+  <p>O querySelectorAll() é um método que retorna os elementos do documento que correspondem a uma classe de CSS, como um objeto dentro de uma lista de objetos (array). Uma das grandes vantagens de usar o método querySelectorAll() é que podemos nos referenciar tanto a tags como classes CSS.</p>
+  <ul>
+    <li>Obter todos os elementos com a tag p.
+      <p>var ps = document.querySelectorAll(“p”)
+        <p>ps[0].style.backgroundColor=”#F00″; //Formata a cor de fundo para vermelho do primeiro elemento com a tag.</p>
+      </p>
+    </li>
+    <li>Obter todos os elementos com a tag p que usam a classe aula. 
+      <p>var ps = document.querySelectorAll(“p.aula”)
+        <p>ps[0].style.backgroundColor=”#00F”; //Formata a cor de fundo para azul do primeiro elemento com a tag <p> que usa a classe aula.</p>
+      </p>
+    </li>
+    <li>Obter quantos elementos com a tag p que usam a classe aula. <p>var qtdeps = document.querySelectorAll(“.aula”).length;</p></li>
+    <li>Obter todos os elementos que usam a classe aula.
+      <p>var ca = document.querySelectorAll(“.aula”);
+        <p>
+          <p>var i;</p>
+          for (i = 0; i < ca.length; i++) {ca[i].style.backgroundColor=”#0F0″;}
+          //Formatar todos estes elementos a cor de fundo para verde.
+        </p>
+      </p>
+    </li>
+    <li>Obter todos os elementos com a tag <a> que possuem a propriedade “target” configurada
+      <p>var as = document.querySelectorAll(“a[target]”);</p>
+      <p>
+        <p>var i;</p>for (i = 0; i < as.length; i++) {as[i].style.border=”2px solid #000″;} //Formatar a borda de todos estes elementos com largura 2px, linha sólida e cor preto.</p>
+    </li>
+    <li>Obter todos os elementos com a tag <p> que estão dentro de uma div
+      <p>var pdv = document.querySelectorAll(“div > p”);
+        <p>
+          <p>var i;</p>
+          for (i = 0; i < pdv.length; i++) {pdv[i].style.backgroundColor=”#FF0″;} ////Formatar a cor de fundo destes elementos com a cor amarelo.
+        </p>
+      </p>
+    </li>
+    <li>Obter todos os elementos com as tags h1, div e span
+      <p>var tags = document.querySelectorAll(“h1, div, span”);</p>
+      <p><p>var i;</p>
+        for (i = 0; i < tags.length; i++) {tags[i].style.backgroundColor=”#0FF”;} ////Formatar a cor de fundo destes elementos com a cor ciano.</p>
+    </li>
+  </ul>
+  <p id="nome">Ricardo</p>
+  <p class="p1">amor</p>
+  <p>abelha</p>
+  <p class="p1">arroz</p>
+
+  <script>
+    let nome = document.getElementById("nome")
+    nome.style.color="red"
+    /*let p1 = document.getElementsByClassName("p1")[0]
+    p1.style.color="pink"*/
+    let tagP = document.getElementsByTagName("p")[9]
+    tagP.style.color="blue"
+
+    let p1 = document.querySelector(".p1")
+    p1.style.color="pink"
+  </script>
+</body>
+</html>
