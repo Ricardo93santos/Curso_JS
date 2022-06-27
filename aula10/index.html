@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipular Data e Hora JS</title>
+</head>
+<body>
+  <h1>Elemento Date()</h1>
+  <p>A classe Date() retorna a data em um formato completo, com todas as informações nescessárias, dia, mês, ano, minuto, segundo e a diferença do fuso horário de greenwich.</p>
+  <p>A classe Date() possue métodos para podermos capturar e manipular elementos da mesma. Por exemplo, para obter o dia do mês usar o método, getDate e para incrementar alguns dias, setDate</p>
+  <p>Para trabalhar com a classe Date(), devemos criar um objeto do tipo Date, "new Date()", podendo armazenar o mesmo em uma variável, "let data = new Date()".</p>
+  <pre>
+    EX:
+    let data = new Date()
+    document.write(data) //Mon Jun 27 2022 11:29:44 GMT-0300 (Horário Padrão de Brasília)
+  </pre>
+  <p id="res"></p>
+  <script>
+    let res = document.getElementById("res")
+    let data = new Date()
+    res.innerHTML =`${data}`
+  </script>
+</body>
+</html>
