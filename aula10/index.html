@@ -5,6 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manipular Data e Hora JS</title>
+  <style>
+    table, tr,th,td{
+      border: 1px solid black;
+      padding: 0 5px;
+      border-collapse: collapse;
+    }
+  </style>
 </head>
 <body>
   <h1>Elemento Date()</h1>
@@ -16,6 +23,64 @@
     let data = new Date()
     document.write(data) //Mon Jun 27 2022 11:29:44 GMT-0300 (Horário Padrão de Brasília)
   </pre>
+  <h2>Metodos mais usados do objeto Date()</h2>
+  <table>
+    <tr>
+      <th>Método</th>
+      <th>Descrição</th>
+      <th>Exemplo</th>
+    </tr>
+    <tr>
+      <td>getDay()</td>
+      <td>Retorna o dia da semana, iniciando com Domingo = 0</td>
+      <td>let diaSemana = data.getDay()</td>
+    </tr>
+    <tr>
+      <td>getDate()</td>
+      <td>Retona dia do mês</td>
+      <td>let dia = data.getDate()</td>
+    </tr>
+    <tr>
+      <td>getMonth()</td>
+      <td>Retona o mês, iniciando com Janeiro = 0</td>
+      <td>let mes = data.getMonth()</td>
+    </tr>
+    <tr>
+      <td>getFullYear</td>
+      <td>Retona o ano com 4 digitos, 2022</td>
+      <td>let ano = data.getFullYear()</td>
+    </tr>
+    <tr>
+      <td>getHours()</td>
+      <td>Retona a hora</td>
+      <td>let dia = data.getHours()</td>
+    </tr>
+    <tr>
+      <td>getMinutes()</td>
+      <td>Retona os minutos</td>
+      <td>let dia = data.getMinutes()</td>
+    </tr>
+    <tr>
+      <td>getSeconds()</td>
+      <td>Retona os segundos</td>
+      <td>let dia = data.getSeconds()</td>
+    </tr>
+    <tr>
+      <td>toDateString()</td>
+      <td>Retorna a data por estêncil.</td>
+      <td>let dataTexto = data.toDateString()</td>
+    </tr>
+    <tr>
+      <td>toLocaleDateString()</td>
+      <td>Retona a data no formato numérico, dd/mm/aaaa</td>
+      <td>let dataNumero = data.toLocaleDateString()</td>
+    </tr>
+    <tr>
+      <td>toLocaleString()</td>
+      <td>Retona a data e as horas, dd/mm/aaaa hh:mm:ss</td>
+      <td>let dia = data.toLocaleString()</td>
+    </tr>
+  </table>
   <p id="res"></p>
   <script>
     let res = document.getElementById("res")
