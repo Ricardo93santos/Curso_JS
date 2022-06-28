@@ -67,7 +67,7 @@
     </tr>
     <tr>
       <td>toDateString()</td>
-      <td>Retorna a data por estêncil.</td>
+      <td>Retorna a data por estêncil, padrão americano</td>
       <td>let dataTexto = data.toDateString()</td>
     </tr>
     <tr>
@@ -78,14 +78,40 @@
     <tr>
       <td>toLocaleString()</td>
       <td>Retona a data e as horas, dd/mm/aaaa hh:mm:ss</td>
-      <td>let dia = data.toLocaleString()</td>
+      <td>let dataEHoraCompleta = data.toLocaleString()</td>
     </tr>
   </table>
   <p id="res"></p>
+  <p id="res1"></p>
+  <p id="res2"></p>
+  <p id="res3"></p>
   <script>
     let res = document.getElementById("res")
+    let res1 = document.getElementById("res1")
+    let res2 = document.getElementById("res2")
+    let res3 = document.getElementById("res3")
     let data = new Date()
-    res.innerHTML =`${data}`
+    let diaSemana = data.getDay()
+    let diaMes = data.getDate()
+    let mes = data.getMonth()
+    let ano = data.getFullYear()
+    let horas = data.getHours()
+    let minutos = data.getMinutes()
+    let segundos = data.getSeconds()
+    let dataTexto = data.toDateString()
+    let dataNumero = data.toLocaleDateString()
+    let dataEHoraCompleta = data.toLocaleString()
+
+    if(diaSemana == 2){
+      diaSemana = "Terça-Feira"
+    }
+    if(mes == 5){
+      mes = "Junho"
+    }
+    res.innerHTML=`Hoje é ${diaSemana}, deia ${diaMes} de ${mes} de ${ano}, às ${horas}:${minutos}:${segundos}`
+    res1.innerHTML= `Padrão americano ${dataTexto}`
+    res2.innerHTML = `${dataNumero}`
+    res3.innerHTML = `${dataEHoraCompleta}`
   </script>
 </body>
 </html>
