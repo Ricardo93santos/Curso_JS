@@ -102,13 +102,13 @@
     let dataNumero = data.toLocaleDateString()
     let dataEHoraCompleta = data.toLocaleString()
 
-    if(diaSemana == 2){
-      diaSemana = "Terça-Feira"
+    if(diaSemana == 6){
+      diaSemana = "Sábado"
     }
-    if(mes == 5){
-      mes = "Junho"
+    if(mes == 6){
+      mes = "Julho"
     }
-    res.innerHTML=`Hoje é ${diaSemana}, deia ${diaMes} de ${mes} de ${ano}, às ${horas}:${minutos}:${segundos}`
+    res.innerHTML=`Hoje é ${diaSemana}, ${diaMes} de ${mes} de ${ano}, às ${horas}:${minutos}:${segundos}`
     res1.innerHTML= `Padrão americano ${dataTexto}`
     res2.innerHTML = `${dataNumero}`
     res3.innerHTML = `${dataEHoraCompleta}`
