@@ -17,8 +17,8 @@
   </style>
 </head>
 <body>
-  <h1>Classe Math</h1>
-  <p>A classe Math é uma biblioteca matemática que contem os métodos e constantes para realizar calculos matemáticos. Alguns métodos como seno, coseno, raiz quadrada, gerar número aleatório e constantes como PI, raiz quadrada de 2, raiz quadrada de 1/2.</p>
+  <h1>Objeto Math</h1>
+  <p>O objeto <strong>Math</strong> é uma biblioteca matemática que contem os métodos e constantes para realizar calculos matemáticos. Alguns métodos como seno, coseno, raiz quadrada, gerar número aleatório e constantes como PI, raiz quadrada de 2, raiz quadrada de 1/2.</p>
   <table>
     <tr>
       <th>Constante</th>
@@ -53,8 +53,8 @@
       <td>Retorna base 2 do logaritimo de E</td>
     </tr>
     <tr>
-      <td>Math.LOGE10E</td>
-      <td>Retorna base decumal do logaritimo de E</td>
+      <td>Math.LOG10E</td>
+      <td>Retorna base decimal do logaritimo de E</td>
     </tr>
   </table>
   <table>
@@ -96,7 +96,69 @@
     </tr>
   </table>
   <p>Para mais métodos e constantes da classe Math, basta acessar a doculmentação no link 
-    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math">Math - JavaScript | MDN</a>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math - JavaScript | MDN</a>
   </p>
+  <h3>Como usar o objeto <strong>Math</strong></h3>
+  <p>Para usar uma constate do Math, basta usar uma das prorpiedas citadas na tabela acima. Podemos armazenar em uma variável. EX:</p>
+  <pre>
+    const PI = Math.PI
+    const raizQuadradaDeDois = Math.SQRT2
+    const logDecimalEuler = Math.LOG10E
+
+    console.log(PI) // 3.141592653589793
+    console.log(raizQuadradaDeDois) // 1.4142135623730951
+    console.log(logDecimalEuler) // 0.4342944819032518
+  </pre>
+  <p>Para usarmos os métodos é da mesma maneira, a diferença é que devemos usar um argumento para o método, e podemos armazenar o resultado em uma variável. EX:</p>
+  <pre>
+    let v = 1.86
+    let v1 = 0.9
+    let v2 = 2.5
+
+
+    let arredondarValorParaCima = Math.ceil(v)
+    let maiorValor = Math.max(v, v1, v2)
+    let menorValor = Math.min(valor, valor1, valor2)
+    let potenciaXY = Math.pow(valor, valor2)
+
+    console.log(arredondarValorParaCima) // 2
+    console.log(maiorValor) // 2.5
+    console.log(menorValor) // 0.9
+    console.log(potenciaXY) // 4.718265339889228
+  </pre>
+  <p>Podemos gerar númoeros aleatórios usando o método random() e arredondalos com o método round(x), como o método random() gera numeros aleatórios de 0 a 1 devemos multiplicar pelo valor máximo que queremos, EX:</p>
+  <pre>
+    let vl = 61 
+    for(i = 0; i<6; i++){
+      console.log(Math.round(Math.random()*vl))
+    }
+  </pre>
+  <p>Nesse caso será gerado 6 numeros de 0 até 61</p>
+  <script>
+   /* const PI = Math.PI
+    const raizQuadradaDeDois = Math.SQRT2
+    const logDecimalEuler = Math.LOG10E
+    console.log(PI)
+    console.log(raizQuadradaDeDois)
+    console.log(logDecimalEuler)*/
+    
+   /* let valor = 1.86
+    let valor1 = 0.9
+    let valor2 = 2.5
+
+
+    let arredondarValorParaCima = Math.ceil(valor)
+    let maiorValor = Math.max(valor, valor1, valor2)
+    let menorValor = Math.min(valor, valor1, valor2)
+    let potenciaXY = Math.pow(valor, valor2)
+
+    console.log(arredondarValorParaCima) 
+    console.log(maiorValor)
+    console.log(menorValor)
+    console.log(potenciaXY)*/
+
+    /*for(i = 0; i<6; i++)
+    {console.log(Math.round(Math.random()*61))}*/
+  </script>
 </body>
 </html>
