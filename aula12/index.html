@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções - JavaScript</title>
+</head>
+<body>
+  <h1>Funcões</h1>
+  <p>Uma função é um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.</p>
+  <p>Para declarar uma função devemos usar a palavra reservada <strong>function</strong>, seguida pelo nome da função, argumentos para a função dentro de () e declaração que a função vai execultar dentro de {}</p>
+  <pre>
+    let valor = 2
+    let valor1 = 5
+    function multiplicar(valor, valor1){
+      return valor*valor1
+    }
+    A declaração return especifica o valor retornado pela função.
+  </pre>
+  <p>Para a função ser execultada a mesma deve ser chamada, onde podemos escrever o nome da função seguida de parenteses (). EX: </p>
+  <pre>
+    let valor = 2
+    let valor1 = 5
+    function multiplicar(valor, valor1){
+      return valor*valor1
+    }
+    console.log(multiplicar(valor, valor1)) //10
+    console.log(multiplicar(valor, valor1)) //10
+    console.log(multiplicar(valor, valor1)) //10
+    A função será chamada 3 vezes, onde o resultado será escrito no console.
+  </pre>
+
+<script>
+    let valor = 2
+    let valor1 = 5
+    function multiplicar(valor, valor1){
+      return valor*valor1
+    }
+    console.log(multiplicar(valor, valor1))
+    console.log(multiplicar(valor, valor1))
+    console.log(multiplicar(valor, valor1))
+</script>
+</body>
+</html>
