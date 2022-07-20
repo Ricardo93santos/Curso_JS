@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manipulação de Tempo</title>
   <style>
-    #dv1, #dv2{
+    #dv1, #dv2, #dv3{
       width: 150px;
       height: 150px;
       border: 1px solid black;
@@ -39,7 +39,41 @@
   </div>
   <div>
     <h3>clearInterval()</h3>
-    <p>Para controlar as funções de setInterval(), fazendo com que a mesma pare no momento desejado devemos usar a função <strong>clearInterval()</strong>, </p>
+    <p>Para controlar as funções de setInterval(), fazendo com que a mesma pare no momento desejado devemos usar a função <strong>clearInterval()</strong>, basta passar a variavel que o setInterval está acossiado.</p>
+    <pre>
+      let intervaloMudarCor
+      let iniciar = document.querySelector("#iniciar")
+      let parar = document.querySelector("parar")
+
+      // função para mudar a cor da div
+      function mudarCor(){
+        let div1 = document.querySelector("#div1")
+        let r = Math.floor(Math.random()*255)
+        let g = Math.floor(Math.random()*255)
+        let b = Math.floor(Math.random()*255)
+        
+        div1.style.backgroundColor="rgb("+r+","+g+","+b+")"
+      }
+
+      // funcção para iniciar a mudança de cor
+      function iniciarMudarCor(){
+        intervaloMudarCor=setInteval(mudarCor)
+      }
+
+      //função para parar a mudança de cor
+      function pararMudarCor(){
+        clearInterval(intervaloMudarCor)
+      }
+
+      iniciar.addEventListener("click", iniciarMudarCor)
+      parar.addEventListener("click", pararMudarCor)
+    </pre>
+
+    <div>
+      <div id="dv3"></div>
+      <input type="button" id="iniciar" value="Iniciar">
+      <input type="button" id="parar" value="Parar">
+    </div>
   </div>
 
   <script>
@@ -60,10 +94,34 @@
       let b = Math.floor(Math.random()*255)
       dv2.style.backgroundColor="rgb("+r+","+g+","+b+")"
     }
-
     
     setTimeout(mudarCor1, 2000)
     setInterval(mudarCor, 2000)
+
+    // função usando clearInterval
+    let intervaloMudarCor
+    let iniciar = document.querySelector("#iniciar")
+    let parar = document.querySelector("#parar")
+
+    function mudarCor3(){
+      let dv3 = document.querySelector("#dv3")
+      let r = Math.floor(Math.random()*255)
+      let g = Math.floor(Math.random()*255)
+      let b = Math.floor(Math.random()*255)
+      dv3.style.backgroundColor="rgb("+r+","+g+","+b+")"
+    }
+
+    function iniciarMudarCor(){
+      intervaloMudarCor=setInterval(mudarCor3, 1000)
+    }
+    function pararMudarCor(){
+      clearInterval(intervaloMudarCor)
+    }
+
+    iniciar.addEventListener("click", iniciarMudarCor)
+    parar.addEventListener("click", pararMudarCor)
+    
+
   </script>
 </body>
 </html>
