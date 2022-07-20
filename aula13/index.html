@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulação de Tempo</title>
+  <style>
+    #dv1, #dv2{
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+      background-color: #fff;
+      text-align: center;
+     }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Manipulação de Tempo em JS</h1>
+    <p>Para manipular tempo no JavaScript podemos usar as funções <strong>setTimeout</strong>, <strong>setInterval</strong> e <strong>requestAnimationframe</strong>.</p>
+    <p>As funções setTimeout e setInterval controlam a passagem do tempo, onde o setTimeout faz a chamada da função callback após o tempo expecificado e finaliza a mesma, não repete a chamada da função, <strong>setTimeout(callBack, time)</strong>. Já setInterval, repete a chamada da função enquanto o intervalo existir, <strong>setInterval(callBack, time)</strong>. Para cancelar um intervalo gerado com setInterval devemos usar a função <strong>clearInterval().</strong></p>
+  </div>
+  <div>
+    <h3>setTimeout</h3>
+    <p>A função setTimeout() recebe uma função callBack e o tempo para executar essa função é informado em milesegundos, ou seja, o valor 1000 é equivalente a 1 segundo. Se quisermos uma ação após 3 a página ser carregada devemos usar a seguinte sintaxe, <strong>steTimeout(mudarCor, 3000)</strong></p>
+    <p>No exemplo a baixo após 2000 milesegundos, 2 segundos, a div muda de cor:</p>
+    <div id="dv1">
+      <p>PRECIONE F5</p>
+    </div>
+  </div>
+  <div>   
+    <h3>setInterval</h3>
+    <p>A função setInterval() tem a mesma sintaxe do setTimeout, <strong>setInterval(mudarCor, 2000)</strong> mas a função é execultada a cada intervalo de tempo, se declararmos 2000 milesegundo será chamada a função a cada 2 segundos.</p>
+    <p>Veja o exemplo a baixo:</p>
+    <div id="dv2">
+      <p>Espere 2 segundos</p>
+    </div>
+  </div>
+  <div>
+    <h3>clearInterval()</h3>
+    <p>Para controlar as funções de setInterval(), fazendo com que a mesma pare no momento desejado devemos usar a função <strong>clearInterval()</strong>, </p>
+  </div>
+
+  <script>
+  //função usando o setTimeout
+    function mudarCor1(){
+      let dv1 = document.querySelector("#dv1")
+      let r = Math.floor(Math.random()*255)
+      let g = Math.floor(Math.random()*255)
+      let b = Math.floor(Math.random()*255)
+      dv1.style.backgroundColor="rgb("+r+","+g+","+b+")"
+    }
+
+  //função usando o setInterval
+    function mudarCor(){
+      let dv2 = document.querySelector("#dv2")
+      let r = Math.floor(Math.random()*255)
+      let g = Math.floor(Math.random()*255)
+      let b = Math.floor(Math.random()*255)
+      dv2.style.backgroundColor="rgb("+r+","+g+","+b+")"
+    }
+
+    
+    setTimeout(mudarCor1, 2000)
+    setInterval(mudarCor, 2000)
+  </script>
+</body>
+</html>
